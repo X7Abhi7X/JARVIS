@@ -3,11 +3,11 @@ import webbrowser
 import pyttsx3
 import musicLibrary
 import requests
-from client import get_openai_response
+from your_file import get_openai_response
 
 recognizer=sr.Recognizer()
 engine = pyttsx3.init()
-newsapi="d4796c3c93924043bd1a0a8a7db53c9d"
+newsapi="YOUR_API"
 
 def speak(text):
     engine.say(text)
@@ -47,11 +47,10 @@ def processCommand(c):
 if __name__ == "__main__":
     speak("Initialising, JARVIS!")
     while True:
-        #Listen for the wake word jarvis
-        # obtain audio from the microphone
+        
         r = sr.Recognizer()
 
-        # recognize speech using google
+       
         print("recognizing...")
         try:
             with sr.Microphone() as source:
